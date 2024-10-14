@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <audio id="background-music" src="/images/bgbeat.mp3" autoplay loop></audio>
+    <audio id="background-music" src="images/bgbeat.mp3" autoplay loop></audio>
     <button class="play-button" onclick="toggleMusic()">
       <i class="fa-solid fa-music"></i>
     </button>
@@ -47,9 +47,9 @@
       function changeBackground(isHovered) {
         const container = document.querySelector(".container");
         if (isHovered) {
-          container.style.backgroundImage = "url('/images/gif2.gif')";
+          container.style.backgroundImage = "url('images/gif2.gif')";
         } else {
-          container.style.backgroundImage = "url('/images/sky.gif')";
+          container.style.backgroundImage = "url('images/sky.gif')";
         }
 
         const visionText = document.querySelector(".vision-text");
@@ -70,9 +70,9 @@
       function changeBackgroundToImage3(isHovered) {
         const container = document.querySelector(".container");
         if (isHovered) {
-          container.style.backgroundImage = "url('/images/level.gif')";
+          container.style.backgroundImage = "url('images/level.gif')";
         } else {
-          container.style.backgroundImage = "url('/images/sky.gif')";
+          container.style.backgroundImage = "url('images/sky.gif')";
         }
       }
 
