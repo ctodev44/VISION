@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vision Landing Page</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="vision-text">
+        YOU SEE THE
+        <span
+          class="glow"
+          onmouseover="changeBackgroundToImage3(true)"
+          onmouseout="changeBackgroundToImage3(false)"
+          >VISION</span
+        >?
+      </h1>
+      <div class="icon-container">
+        <button
+          class="enter-button"
+          onmouseover="changeBackground(true)"
+          onmouseout="changeBackground(false)"
+          onmouseover="shakeTextAndIcon(true)"
+          onmouseout="shakeTextAndIcon(false)"
+        >
+          show me
+        </button>
+
+        <a href="https://twitter.com" target="_blank" class="twitter-icon">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+      </div>
+    </div>
+
+    <audio id="background-music" src="/images/bgbeat.mp3" autoplay loop></audio>
+    <button class="play-button" onclick="toggleMusic()">
+      <i class="fa-solid fa-music"></i>
+    </button>
+
+    <script>
+      function changeBackground(isHovered) {
+        const container = document.querySelector(".container");
+        if (isHovered) {
+          container.style.backgroundImage = "url('/images/gif2.gif')";
+        } else {
+          container.style.backgroundImage = "url('/images/sky.gif')";
+        }
+
+        const visionText = document.querySelector(".vision-text");
+        const twitterIcon = document.querySelector(".enter-button");
+        const visionGlow = document.querySelector(".glow");
+
+        if (isHovered) {
+          visionText.classList.add("shake");
+          twitterIcon.classList.add("shake");
+          visionGlow.classList.add("glow-effect");
+        } else {
+          visionText.classList.remove("shake");
+          twitterIcon.classList.remove("shake");
+          visionGlow.classList.remove("glow-effect");
+        }
+      }
+
+      function changeBackgroundToImage3(isHovered) {
+        const container = document.querySelector(".container");
+        if (isHovered) {
+          container.style.backgroundImage = "url('/images/level.gif')";
+        } else {
+          container.style.backgroundImage = "url('/images/sky.gif')";
+        }
+      }
+
+      function toggleMusic() {
+        const music = document.getElementById("background-music");
+        const playButtonIcon = document.querySelector(".play-button i");
+
+        if (music.paused) {
+          music.play();
+          playButtonIcon.classList.remove("fa-play");
+          playButtonIcon.classList.add("fa-pause");
+        } else {
+          music.pause();
+          playButtonIcon.classList.remove("fa-pause");
+          playButtonIcon.classList.add("fa-play");
+        }
+      }
+    </script>
+  </body>
+</html>
