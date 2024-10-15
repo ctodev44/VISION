@@ -12,6 +12,52 @@ body, html {
     font-family: 'CustomFont', Times, serif; 
 }
 
+@media only screen and (max-width: 768px) {
+    .vision-text {
+        font-size: 2em; 
+    }
+
+    .enter-button {
+        font-size: 1em; 
+        padding: 8px 16px; 
+        margin-top: 10px;
+        border: 2px solid white; 
+        color: white; 
+        background-color: transparent; 
+    }
+
+    .social-icon {
+        font-size: 1.5em; 
+        margin-top: 1.5em; 
+    }
+
+    .copy-container {
+        bottom: 100px; 
+    }
+
+    .copy-text {
+        font-size: 0.9em; 
+        color: white; 
+    }
+
+    .copy-icon {
+        font-size: 1.1em; 
+        color: white; 
+    }
+
+    .play-button {
+        left: 2rem; 
+        bottom: 50px; 
+        font-size: 1.3em; 
+        color: white; 
+    }
+
+    .icon-container {
+        gap: 15px; 
+        bottom: 10px; 
+    }
+}
+
 .container {
     background: url('images/sky.gif') no-repeat center center fixed;
     background-size: cover;
@@ -130,7 +176,7 @@ body, html {
     left: 3rem;
     position: absolute;
     bottom: 60px; 
-    font-size: 1.5em; 
+    font-size: 1.5em;
     color: white;
     text-shadow: 1px 1px 5px rgb(255, 255, 255);
     transition: transform 0.3s ease, color 0.3s ease;
