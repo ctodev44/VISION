@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'CustomFont';
-    src: url('/images/Aesthetic-Regular.ttf') format('truetype');
+    src: url('images/Aesthetic-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -13,7 +13,7 @@ body, html {
 }
 
 .container {
-    background: url('/images/sky.gif') no-repeat center center fixed;
+    background: url('images/sky.gif') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     display: flex;
@@ -119,7 +119,7 @@ body, html {
 
 
 .enter-button:hover {
-    background: url('/images/gif2.gif') no-repeat center center fixed;
+    background: url('images/gif2.gif') no-repeat center center fixed;
     background-size: cover;
 }
 
