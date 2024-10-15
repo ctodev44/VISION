@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'CustomFont';
-    src: url('images/Aesthetic-Regular.ttf') format('truetype');
+    src: url('/images/Aesthetic-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,54 +12,8 @@ body, html {
     font-family: 'CustomFont', Times, serif; 
 }
 
-@media only screen and (max-width: 768px) {
-    .vision-text {
-        font-size: 1.5em; 
-    }
-
-    .enter-button {
-        font-size: 1em; 
-        padding: 8px 16px; 
-        margin-top: 5px;
-        border: 2px solid white; 
-        color: white; 
-        background-color: transparent; 
-    }
-
-    .social-icon {
-        font-size: 1.5em; 
-        margin-top: 1.5em; 
-    }
-
-    .copy-container {
-        bottom: 100px; 
-    }
-
-    .copy-text {
-        font-size: 0.9em; 
-        color: white; 
-    }
-
-    .copy-icon {
-        font-size: 1.1em; 
-        color: white; 
-    }
-
-    .play-button {
-        left: 2rem; 
-        bottom: 50px; 
-        font-size: 1.3em; 
-        color: white; 
-    }
-
-    .icon-container {
-        gap: 15px; 
-        bottom: 10px; 
-    }
-}
-
 .container {
-    background: url('images/sky.gif') no-repeat center center fixed;
+    background: url('/images/sky.gif') no-repeat center center fixed;
     background-size: cover;
     height: 100%;
     display: flex;
@@ -90,10 +44,10 @@ body, html {
 .icon-container {
     display: flex;
     justify-content: center;
-    gap: 20px; 
+    gap: 20px; /* Add space between icons */
     margin-top: 20px;
     position: absolute;
-    bottom: 20px; 
+    bottom: 20px; /* Adjusts the distance from the bottom */
     left: 0;
     right: 0;
     text-align: center;
@@ -121,7 +75,7 @@ body, html {
 
 .enter-button {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 1px;
     padding: 10px 20px;
     background-color: transparent;
     border-radius: 5%;
@@ -133,7 +87,7 @@ body, html {
     ;
     text-shadow: 3px 2px 5px rgb(255, 255, 255);
     box-shadow: 3px 2px 5px rgb(255, 255, 255);
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; 
     transition: background-color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -165,7 +119,7 @@ body, html {
 
 
 .enter-button:hover {
-    background: url('images/gif2.gif') no-repeat center center fixed;
+    background: url('/images/gif2.gif') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -175,8 +129,8 @@ body, html {
     cursor: pointer;
     left: 3rem;
     position: absolute;
-    bottom: 60px; 
-    font-size: 1.5em;
+    bottom: 60px; /* Adjust this value to position the button */
+    font-size: 1.5em; /* Adjust size */
     color: white;
     text-shadow: 1px 1px 5px rgb(255, 255, 255);
     transition: transform 0.3s ease, color 0.3s ease;
@@ -198,14 +152,14 @@ body, html {
     align-items: center;
     flex-direction: column;
     position: absolute;
-    bottom: 150px; 
+    bottom: 140px; 
     left: 0;
     right: 0;
     text-align: center;
 }
 
 .copy-text {
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
     font-size: 1.1em; 
     color: white;
 }
