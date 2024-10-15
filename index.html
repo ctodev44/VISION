@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>you see the vision?</title>
+    <title>do you see the vision?</title>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       rel="stylesheet"
@@ -13,7 +13,7 @@
   <body>
     <div class="container">
       <h1 class="vision-text">
-        YOU SEE THE
+        DO YOU SEE THE
         <span
           class="glow"
           onmouseover="changeBackgroundToImage3(true)"
@@ -21,35 +21,65 @@
           >VISION</span
         >?
       </h1>
-      <div class="icon-container">
-        <button
-          class="enter-button"
-          onmouseover="changeBackground(true)"
-          onmouseout="changeBackground(false)"
-          onmouseover="shakeTextAndIcon(true)"
-          onmouseout="shakeTextAndIcon(false)"
+      <div class="button-container">
+        <a
+            href="https://dexscreener.com" 
+            target="_blank"
+            class="enter-button"
+            onmouseover="changeBackground(true)"
+            onmouseout="changeBackground(false)"
+            onmouseover="shakeTextAndIcon(true)"
+            onmouseout="shakeTextAndIcon(false)"
         >
-          show me
-        </button>
-
-        <a href="https://twitter.com" target="_blank" class="twitter-icon">
+            show me
+        </a>
+        <div class="copy-container">
+            <p class="copy-text">XXXXAXXXXAXXXX</p>
+            <i
+  class="fa-solid fa-copy copy-icon"
+  onclick="copyText()"
+  onmouseover="changeBackgroundToGif3(true)"
+  onmouseout="changeBackgroundToGif3(false)"
+></i>
+        </div>
+    </div>
+    </div>
+    <div class="icon-container">
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          class="social-icon twitter-icon"
+        >
           <i class="fa-brands fa-x-twitter"></i>
         </a>
+        <a
+          href="https://telegram.org"
+          target="_blank"
+          class="social-icon telegram-icon"
+        >
+          <i class="fa-brands fa-telegram"></i>
+        </a>
+    </div>
       </div>
     </div>
 
-    <audio id="background-music" src="images/bgbeat.mp3" autoplay loop></audio>
+    <audio
+      id="background-music"
+      src="/images/breakcore Hades.mp3"
+      autoplay
+      loop
+    ></audio>
     <button class="play-button" onclick="toggleMusic()">
-      <i class="fa-solid fa-music"></i>
+      <i class="fa-solid fa-volume-up"></i>
     </button>
 
     <script>
       function changeBackground(isHovered) {
         const container = document.querySelector(".container");
         if (isHovered) {
-          container.style.backgroundImage = "url('images/gif2.gif')";
+          container.style.backgroundImage = "url('/images/gif2.gif')";
         } else {
-          container.style.backgroundImage = "url('images/sky.gif')";
+          container.style.backgroundImage = "url('/images/sky.gif')";
         }
 
         const visionText = document.querySelector(".vision-text");
@@ -70,11 +100,20 @@
       function changeBackgroundToImage3(isHovered) {
         const container = document.querySelector(".container");
         if (isHovered) {
-          container.style.backgroundImage = "url('images/level.gif')";
+          container.style.backgroundImage = "url('/images/level.gif')";
         } else {
-          container.style.backgroundImage = "url('images/sky.gif')";
+          container.style.backgroundImage = "url('/images/sky.gif')";
         }
       }
+
+      function changeBackgroundToGif3(isHovered) {
+  const container = document.querySelector(".container");
+  if (isHovered) {
+    container.style.backgroundImage = "url('/images/gif4.gif')";
+  } else {
+    container.style.backgroundImage = "url('/images/sky.gif')";
+  }
+}
 
       function toggleMusic() {
         const music = document.getElementById("background-music");
@@ -82,14 +121,44 @@
 
         if (music.paused) {
           music.play();
-          playButtonIcon.classList.remove("fa-play");
+          playButtonIcon.classList.remove("fa-volume-off");
           playButtonIcon.classList.add("fa-pause");
         } else {
           music.pause();
           playButtonIcon.classList.remove("fa-pause");
-          playButtonIcon.classList.add("fa-play");
+          playButtonIcon.classList.add("fa-volume-off");
         }
       }
+
+      function copyText() {
+    const textToCopyElement = document.querySelector('.copy-text');
+    const originalText = textToCopyElement.innerText;
+
+    // Copy the text to clipboard
+    navigator.clipboard.writeText(originalText).then(() => {
+        // Change the text to "Copied!" temporarily
+        textToCopyElement.innerText = "copied";
+        
+        // Reset the text after 1 second
+        setTimeout(() => {
+            textToCopyElement.innerText = originalText;
+        }, 1000);
+        
+        // Optionally, add a visual effect to the copy icon as well
+        const copyIcon = document.querySelector('.copy-icon');
+        copyIcon.classList.add('copied');
+        setTimeout(() => {
+            copyIcon.classList.remove('copied');
+        }, 1000);
+    }).catch(err => {
+        console.error('Failed to copy text: ', err);
+    });
+}
+
+
+
+
+
     </script>
   </body>
 </html>
