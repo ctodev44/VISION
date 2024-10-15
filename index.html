@@ -134,17 +134,17 @@
     const textToCopyElement = document.querySelector('.copy-text');
     const originalText = textToCopyElement.innerText;
 
-    // Copy the text to clipboard
+   
     navigator.clipboard.writeText(originalText).then(() => {
-        // Change the text to "Copied!" temporarily
+        
         textToCopyElement.innerText = "copied";
         
-        // Reset the text after 1 second
+        
         setTimeout(() => {
             textToCopyElement.innerText = originalText;
         }, 1000);
         
-        // Optionally, add a visual effect to the copy icon as well
+        
         const copyIcon = document.querySelector('.copy-icon');
         copyIcon.classList.add('copied');
         setTimeout(() => {
