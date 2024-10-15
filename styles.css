@@ -14,7 +14,7 @@ body, html {
 
 @media only screen and (max-width: 768px) {
     .vision-text {
-        font-size: 2em; 
+        font-size: 1.5em; 
     }
 
     .enter-button {
